@@ -18,6 +18,7 @@ pipeline {
                     myTestContainer.inside {
                         sh 'npm install --only=dev'
                         sh 'npm test'
+                        exit 1
                     }
                 }
             }
