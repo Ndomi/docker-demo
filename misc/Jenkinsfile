@@ -31,12 +31,12 @@ pipeline {
             }
        }
     }
-    post {
-        success {
-            slackSend color: '#32cd32', channel: 'slack-jenkins', message: "Pipeline status Status-${currentBuild.currentResult} ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL}"
-        }
-        failure {
-            slackSend color: '#FF0000', channel: 'slack-jenkins', message: "Pipeline status Status-${currentBuild.currentResult} ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL}"
-        }
-    }
+    // post {
+    //     success {
+    //         slackSend color: '#32cd32', channel: 'slack-jenkins', message: "Pipeline status Status-${currentBuild.currentResult} ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL}"
+    //     }
+    //     failure {
+    //         slackSend color: '#FF0000', channel: 'slack-jenkins', message: "Pipeline status Status-${currentBuild.currentResult} ${env.JOB_NAME} ${env.BUILD_NUMBER} ${env.BUILD_URL}"
+    //     }
+    // }
 }
